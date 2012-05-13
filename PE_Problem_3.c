@@ -18,13 +18,16 @@ int main()
 {
     LLU nb = NB;
     printf("Number is : %llu\n", nb);
-    for( LLU i = 1 ; i < sqrt(nb) ; i++) // énumération de l'ensemble des nombres
-        if(isPrime(i) == 1) // filtre sur les nbres entiers
-            if(nb % i == 0) // check que c'est un facteur
+    for( LLU i = 1 ; i < sqrt(nb) ; i++) // ï¿½numï¿½ration de l'ensemble des nombres
+        if(isPrime(i) == 1) // check if number is prime
+            if(nb % i == 0) // check if number is a factor
                 printf("Prime factor of %llu : %d\n", nb, i);
     return 0;
 }
 
+/*
+** Check if wheter a number is a prime (1 = prime; 0 = not prime)
+*/
 int isPrime(LLU number)
 {
     for(LLU i = 2; i < sqrt(number); i++)
